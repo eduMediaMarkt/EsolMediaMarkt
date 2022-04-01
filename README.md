@@ -17,8 +17,9 @@ La aplicación React tiene dos vistas o pantalla. El primero es listar los produ
 Se puede ver la información del producto al dar clic a una fila de los elementos que salen en la lista. En la parte superior puede ver el estado de los botones cuando se hace clic en ellos (Muestra cuantos clics a los botónes se han realizado). Se creó un búscador en la parte superior derecho de la lista, el cuál, realiza una búsqueda en las columnas 'Nombre' y 'Descripción' y muestra aquellos elementos que coinciden.
 
                   Cómo ejecutar el proyecto .Net 5:
-1- Descargue o clone el proyecto a Visual Studio.
-2- Ejecutar el proyecto, le mostrará a Swagger los servicios creados en webApi. 
+1- Ejecute script de la base de datos brindada en Sql Server Management Studio, para crearlo.
+2- Descargue o clone el proyecto a Visual Studio.
+3- Ejecutar el proyecto, le mostrará a Swagger los servicios creados en webApi. 
 
                   Cómo ejecutar el proyecto React.js:
 1- Ejecutar proyecto de .Net5.                  
