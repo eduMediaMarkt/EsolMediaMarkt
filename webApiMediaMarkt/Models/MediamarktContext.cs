@@ -36,8 +36,6 @@ namespace webApiMediaMarkt.Models
 
             modelBuilder.Entity<Producto>(entity =>
             {
-                entity.HasNoKey();
-
                 entity.Property(e => e.Descripcion).IsRequired();
 
                 entity.Property(e => e.Familia_Producto).IsRequired();
