@@ -1,20 +1,28 @@
 # EsolMediaMarkt
-Prueba web api 5.0 + React
+Prueba web api 5.0 + Reaccionar
 
-This repository is made for test, to join the Media Markt team.
+Este repositorio está hecho para prueba asignada.
 
-                      How the project works:
-The project is made with SQL Server, Microsoft .Net 5 C# and React.JS with Typescript.
+                      Cómo funciona el proyecto:
+El proyecto está realizado con SQL Server, Microsoft .Net 5 C# y React.JS con Typescript.
 
-Made a table called 'Product' with the fields 'Nombre', 'Descripcion', 'Precio', 'Familia_Producto'.
+Se creó una base de datos llamado 'MediaMarkt', posteriormente se creó una tabla llamada 'Producto' con los campos 'Nombre', 'Descripcion', 'Precio', 'Familia_Producto'.
 
-In application with .Net 5 C#, made method 'GET' and 'POST' for the manipulation of model in database.
+En la aplicación webApi con .Net 5 C#, se crearon los métodos 'GET' y 'POST' para la manipulación del modelo en la base de datos.
 
-In application with ReactJS and Typescript, used components 'PrimeReact' for the screens. Used 'Hooks' of the version 16.8. And, 'Redux' for to save general states of the application. In 'Redux' we will have saved the state the loading of the application and products list that we get when searching.
+En la aplicación con ReactJS, se utilizaron componentes 'PrimeReact' para las pantallas. Se usó 'Hooks' de la versión 16.8. 
 
-React application have two views or screen. The first is to list and to search a product, where application .Net 5 (with method 'GET'), call datas in SQL Server and then show with react.js. And the second is to add a product in database, where the user provides information in the form of React.js application, and then, is introduced in database with .NET 5 application (with method 'POST').
+La aplicación React tiene dos vistas o pantalla. El primero es listar los productos y buscar uno, donde la aplicación .Net 5 (con el método 'GET'), llama a los datos en SQL Server y luego los muestra con react.js. Y el segundo (un Modal) es agregar un producto en la base de datos, donde el usuario proporciona información en un formulario, y luego, se introduce en la base de datos con la aplicación .NET 5 (con el método 'POST').
 
-                  How to execute project:
-Execute the application in .Net 5.
+Se puede ver la información del producto al dar clic a una fila de los elementos que salen en la lista. En la parte superior puede ver el estado de los botones cuando se hace clic en ellos (Muestra cuantos clics a los botónes se han realizado). Se creó un búscador en la parte superior derecho de la lista, el cuál, realiza una búsqueda en las columnas 'Nombre' y 'Descripción' y muestra aquellos elementos que coinciden.
 
-Execute the application in React.js.
+                  Cómo ejecutar el proyecto .Net 5:
+1- Descargue o clone el proyecto a Visual Studio.
+2- Ejecutar el proyecto, le mostrará a Swagger los servicios creados en webApi. 
+
+                  Cómo ejecutar el proyecto React.js:
+1- Ejecutar proyecto de .Net5.                  
+2- Descargue o clone el proyecto a Visual Studio Code.
+3- Instalar paquete npm.
+4- Instalar paquete de componentes 'PrimeReact'.
+5- Ejecutar en consola de Visual Studio Code 'npm start' para iniciar el proyecto.
