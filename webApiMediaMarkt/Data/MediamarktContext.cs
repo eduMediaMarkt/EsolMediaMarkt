@@ -3,20 +3,21 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.Extensions.Configuration;
+using webApiMediaMarkt.Models;
 
 #nullable disable
 
-namespace webApiMediaMarkt.Models
+namespace webApiMediaMarkt.Data
 {
     public partial class MediamarktContext : DbContext
     {
-        public MediamarktContext()
-        {
-        }
+        private IConfiguration _Config;
 
-        public MediamarktContext(DbContextOptions<MediamarktContext> options)
+        public MediamarktContext(DbContextOptions<MediamarktContext> options, IConfiguration Config)
             : base(options)
         {
+            _Config = Config;
         }
 
         public virtual DbSet<Producto> Producto { get; set; }
@@ -25,8 +26,8 @@ namespace webApiMediaMarkt.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=PCVIRTUAL7SQLSE\\SQLHYPERV1;Initial Catalog=MediaMarkt;User ID=sa;Password=123");
+                //me parece que esto se genero mediante un scaffolding
+                optionsBuilder.UseSqlServer(_Config.GetConnectionString("Conexion"));
             }
         }
 
